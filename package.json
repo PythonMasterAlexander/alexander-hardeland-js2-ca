@@ -1,0 +1,15 @@
+{
+  "name": "alexander-hardeland-js2-ca",
+  "version": "1.0.0",
+  "description": "Course Assignment Javascript2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o styles"
+  },
+  "author": "Alexander Hardeland",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
