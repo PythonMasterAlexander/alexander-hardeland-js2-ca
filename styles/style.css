@@ -1,0 +1,40 @@
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+:root {
+  font-size: 16px; }
+
+body, html {
+  height: 100%; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Alegreya Sans', 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+
+.wrapper {
+  flex: 1 0 auto; }
+
+.logo-container--bitcoin-logo {
+  font-family: "Exo 2", "Impact", sans-serif;
+  font-size: 37px; }
+
+.logo-container--crypto-news-logo {
+  font-family: "Exo 2", "Impact", sans-serif;
+  font-weight: 600; }
+
+svg {
+  height: 50px;
+  width: 50px; }
+
+footer {
+  flex-shrink: 0; }
