@@ -16,6 +16,7 @@ html {
   box-sizing: border-box; }
 
 body {
+  background-color: #dde4e4;
   font-family: 'Alegreya Sans', 'Arial', sans-serif;
   display: flex;
   flex-direction: column;

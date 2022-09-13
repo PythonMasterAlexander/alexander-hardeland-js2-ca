@@ -21,6 +21,7 @@ html {
 }
 
 body {
+  background-color: $background-color-main;
   font-family: 'Alegreya Sans', 'Arial', sans-serif;
   display: flex;
   flex-direction: column;
