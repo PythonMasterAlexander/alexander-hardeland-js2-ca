@@ -1,9 +1,21 @@
-.logo-container--bitcoin-logo {
+a {
+  text-decoration: 0;
+}
+
+nav a {
+  font-size: $font-size-21px;
+}
+
+.logo-container--bitcoin-logo, .logo-container--crypto-news-logo {
   font-family: $bitcoin-logo-font-family;
+}
+
+.logo-container--bitcoin-logo {
   font-size: $font-size-37px;
+  font-weight: 900; 
 }
 
 .logo-container--crypto-news-logo {
-  font-family: $bitcoin-logo-font-family;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: $font-size-21px;
 }
