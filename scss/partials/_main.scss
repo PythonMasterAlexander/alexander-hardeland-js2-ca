@@ -6,3 +6,11 @@ svg {
 .main-section__api-container {
   margin: 20px auto;
 }
+
+.card-container {
+  background-color: $white-color;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 50px;
+  padding: 20px;
+}

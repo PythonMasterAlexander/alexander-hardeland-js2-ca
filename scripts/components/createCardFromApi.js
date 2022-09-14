@@ -6,9 +6,11 @@ export const createElement = function(typeOfElement) {
 
 const createCardFromApi = function(title, price) {
   const div = createElement('div');
-  const cardHeading = createElement('h3');
+  div.setAttribute("class", "card-container");
 
+  const cardHeading = createElement('h3');
   const priceTitleSpan = createElement('span');
+
   const priceSpan = priceTitleSpan.cloneNode();
   const checkBox = createElement('input');
 
