@@ -31,6 +31,12 @@ a {
 nav a {
   font-size: 21px; }
 
+main a {
+  color: white; }
+
+.main-section__to-login-button-container a {
+  font-size: 30px; }
+
 .logo-container--bitcoin-logo, .logo-container--crypto-news-logo {
   font-family: "Exo 2", "Impact", sans-serif; }
 
@@ -62,6 +68,20 @@ svg {
   height: 50px;
   width: 50px; }
 
+.main-section__to-login-button-container, .main-section__to-favourites-button-container {
+  background-color: #082b0e;
+  border-radius: 3px;
+  width: 320px;
+  text-align: center; }
+
+.main-section__to-login-button-container {
+  padding-top: 24px;
+  padding-bottom: 24px; }
+
+.main-section__to-favourites-button-container {
+  padding-top: 12px;
+  padding-bottom: 12px; }
+
 .main-section__api-container {
   margin: 20px auto; }
 
@@ -73,6 +93,9 @@ svg {
   padding: 20px; }
 
 footer {
+  background-color: #082b0e;
+  color: white;
+  min-height: 125px;
   flex-shrink: 0; }
 
 .display-error {

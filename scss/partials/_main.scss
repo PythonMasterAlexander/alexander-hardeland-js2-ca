@@ -3,6 +3,22 @@ svg {
   width: 50px;
 }
 
+.main-section__to-login-button-container, .main-section__to-favourites-button-container {
+  background-color: $button-color;
+  border-radius: 3px;
+  width: 320px;
+  text-align: center;
+}
+
+.main-section__to-login-button-container {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.main-section__to-favourites-button-container {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
 .main-section__api-container {
   margin: 20px auto;
 }
