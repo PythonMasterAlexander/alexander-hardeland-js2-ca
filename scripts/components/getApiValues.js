@@ -1,6 +1,8 @@
 import displayApiErrorMessage from './displayApiErrorMessage.js';
 import createCardFromApi from './createCardFromApi.js';
 
+import checkInputBox from'./checkInputBox.js';
+
 import { mainSectionApiContainer } from '../partials/variables.js';
 import { baseUrl } from '../partials/constants.js';
 
@@ -8,7 +10,6 @@ const apiUrl = baseUrl + "/api" + "/cryptos";
 
 export const getApiValues = async function() {
 
-  mainSectionApiContainer.append(createCardFromApi());
   try {
     const response = await fetch(apiUrl);
 
@@ -24,6 +25,15 @@ export const getApiValues = async function() {
       const cryptoPrice = dataAttributes.price;
 
       mainSectionApiContainer.append(createCardFromApi(cryptoTitle, cryptoPrice));
+    }
+    console.log(dataFromApiResult[0]);
+
+
+    const inputBoxes = document.querySelectorAll("#checkbox");
+    for(let i = 0; i < inputBoxes.length; i++) {
+      const inputBox = inputBoxes[i];
+
+      inputBox.addEventListener("click", checkInputBox);
     }
   }
   catch(error) {
