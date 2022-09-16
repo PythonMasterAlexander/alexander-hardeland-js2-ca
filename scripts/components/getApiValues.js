@@ -23,7 +23,7 @@ export const getApiValues = async function() {
     mainSectionApiContainer.replaceChildren();
     insertApiValuesOnPage(dataFromApiResult, createCardFromApi, mainSectionApiContainer);
 
-    //Test code
+    /*Test code
     //Need to get the value of the api result and then store it in the localStorage array and be able to show this array in the favourites page 
     let arr = []; //getValuesFromLocalStorage();
     for(let i = 0; i < dataFromApiResult.length; i++) {
@@ -31,10 +31,11 @@ export const getApiValues = async function() {
       arr.push(test);
       saveValueToLocalStorage(arr);
     }
+    */
 
     //Test code
     //Looping over the input boxes, if the input box is checked, save the obj to the localStorage array. The obj is the same as the one above
-    const inputBoxes = document.querySelectorAll("#checkbox");
+    const inputBoxes = document.querySelectorAll("input");
     for(let i = 0; i < inputBoxes.length; i++) {
       const inputBox = inputBoxes[i];
 
@@ -42,10 +43,14 @@ export const getApiValues = async function() {
         const isCheckInputChecked = event.target.checked; 
 
         if (isCheckInputChecked) {
-          //This is where I want to push the obj to the localStorage array. Only problem is I dont know how to get the object in dataFromApiResult from here
+          //This is where I want to push the obj to the localStorage array. Only problem is I dont know how to  
           //if true, push obj to localStorage array
+          for(let i = 0; i < dataFromApiResult.length; i++) {
+            console.log(dataFromApiResult[i]);
+          }
         }
       };
+
       inputBox.addEventListener("click", checkInputBox);
     }
   }
