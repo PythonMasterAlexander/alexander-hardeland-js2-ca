@@ -4,7 +4,7 @@ export const createElement = function(typeOfElement) {
   return element;
 };
 
-const createCardFromApi = function(title, price) {
+const createCardFromApi = function(title, price, id) {
   const div = createElement('div');
   div.setAttribute("class", "card-container");
 
@@ -19,7 +19,7 @@ const createCardFromApi = function(title, price) {
 
   priceTitleSpan.innerText = "Price" 
   checkBox.setAttribute("type", "checkbox");
-  checkBox.setAttribute("data-id", `${price}`);
+  checkBox.setAttribute("data-id", `${id}`);
 
   div.append(cardHeading, priceTitleSpan, priceSpan, checkBox);
   return div;
