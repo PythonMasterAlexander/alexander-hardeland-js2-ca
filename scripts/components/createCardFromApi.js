@@ -19,7 +19,7 @@ const createCardFromApi = function(title, price) {
 
   priceTitleSpan.innerText = "Price" 
   checkBox.setAttribute("type", "checkbox");
-  checkBox.setAttribute("id", "checkbox");
+  checkBox.setAttribute("data-id", `${price}`);
 
   div.append(cardHeading, priceTitleSpan, priceSpan, checkBox);
   return div;
