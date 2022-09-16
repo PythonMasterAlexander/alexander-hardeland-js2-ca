@@ -24,10 +24,12 @@ export const getApiValues = async function() {
     insertApiValuesOnPage(dataFromApiResult, createCardFromApi, mainSectionApiContainer);
 
     //Test code
+    //Here is where I get stuck, I want to loop over the dataFromApiResult to get the id on each object
+    //Then I can compare the id from the dataIdOnCheckBox to the id from dataFromApiResult against each other and push to localStorage
+    //But when I loop over the dataFromApiResult and try and console log, the results repets over 6 times or so 
     const inputBoxes = document.querySelectorAll("input");
     for(let i = 0; i < inputBoxes.length; i++) {
       const inputBox = inputBoxes[i];
-      //Need to set the data-item attribute to be the id from the listOfApiResults values
 
       const checkInputBox = function() {
         const isCheckInputChecked = event.target.checked; 
@@ -36,6 +38,10 @@ export const getApiValues = async function() {
         if (isCheckInputChecked) {
           //This is where I want to push the obj to the localStorage array. Only problem is I dont know how to  
           //if true, push obj to localStorage array
+          for(let i = 0; i < dataFromApiResult.length; i++) {
+            console.log(dataFromApiResult[i]);
+            const checkId = dataFromApiResult[i];
+          }
         }
       };
 
