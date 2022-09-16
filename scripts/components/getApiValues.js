@@ -1,10 +1,14 @@
 import displayApiErrorMessage from './displayApiErrorMessage.js';
 import createCardFromApi from './createCardFromApi.js';
 
+import insertApiValuesOnPage from './insertApiValuesOnPage.js';
 //import checkInputBox from'./checkInputBox.js';
 
 import { mainSectionApiContainer } from '../partials/variables.js';
 import { baseUrl } from '../partials/constants.js';
+
+import getValuesFromLocalStorage from './getValuesFromLocalStorage.js';
+import { saveValueToLocalStorage } from './getValuesFromLocalStorage.js';
 
 const apiUrl = baseUrl + "/api" + "/cryptos";
 
@@ -17,26 +21,28 @@ export const getApiValues = async function() {
     const dataFromApiResult = apiResult.data;
 
     mainSectionApiContainer.replaceChildren();
+    insertApiValuesOnPage(dataFromApiResult, createCardFromApi, mainSectionApiContainer);
 
+    //Need to get the value of the api result and then store it in the localStorage array and be able to show this array in the favourites page 
+    let arr = [];
     for(let i = 0; i < dataFromApiResult.length; i++) {
-      const dataAttributes = dataFromApiResult[i].attributes;
-
-      const cryptoTitle = dataAttributes.title; 
-      const cryptoPrice = dataAttributes.price;
-
-      mainSectionApiContainer.append(createCardFromApi(cryptoTitle, cryptoPrice));
+      const test = dataFromApiResult[i];
+      arr.push(test);
+      saveValueToLocalStorage(arr);
     }
+    console.log(arr);
 
+    //Looping over the input boxes, if the input box is checked, save the obj to the localStorage array. The obj is the same as the one above
     const inputBoxes = document.querySelectorAll("#checkbox");
     for(let i = 0; i < inputBoxes.length; i++) {
       const inputBox = inputBoxes[i];
 
       const checkInputBox = function() {
-        console.log(event.target);
         const isCheckInputChecked = event.target.checked; 
 
         if (isCheckInputChecked) {
-          //if true, push crypto value to localStorage
+          //if true, push obj to localStorage array
+          console.log(event.target);
         }
       };
       inputBox.addEventListener("click", checkInputBox);

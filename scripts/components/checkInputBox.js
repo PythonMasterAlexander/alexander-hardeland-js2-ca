@@ -1,9 +1,9 @@
 const checkInputBox = function() {
-  console.log(event.target);
   const isCheckInputChecked = event.target.checked; 
 
   if (isCheckInputChecked) {
-    //if true, push crypto value to localStorage
+    //if true, push obj to localStorage array
+    console.log(event.target);
   }
 };
 export default checkInputBox; 
