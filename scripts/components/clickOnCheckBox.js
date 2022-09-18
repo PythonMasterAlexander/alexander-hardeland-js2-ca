@@ -4,9 +4,8 @@ import { key } from '../partials/constants.js';
 
 //When user is clicking the checkBox, the value he clicks get saved in the localStore array of objects
 const clickOnCheckBox = function() {
-  const dataIdOnValue = this.dataset.id;
-  let isChecked = this.checked;
-  console.log(isChecked);
+  const dataIdOnValue = parseInt(this.dataset.id);
+  const isCheckBoxChecked = this.checked;
 
   const valueInLocalStorage = getValuesFromLocalStorage();
   
@@ -29,16 +28,22 @@ const clickOnCheckBox = function() {
 
   //Here I am trying to mark the checkBoxes as marked. By comparing the two values but it don't work
   //I tried to parseInt both values but using typeof tells me that both values are string value
-  const getLocalStorageId = valueInLocalStorage.find((value) => {
-    return value.id === dataIdOnValue;
-  });
-  
-  console.log(getLocalStorageId);
-  if (getLocalStorageId) {
-    isChecked = true;
-  } else {
-    isChecked = false;
-  }
 
+  const valueInLocalStorageIndex = valueInLocalStorage.findIndex((value) => {
+    if (value.id === dataIdOnValue) {
+      return true;
+    }
+  });
+
+  valueInLocalStorage[valueInLocalStorageIndex].complete = isCheckBoxChecked;
+
+  valueInLocalStorage.forEach((listValue) => {
+    let arelistValueChecked = "";
+    console.log(valueInLocalStorage);
+
+    if (listValue.complete) {
+      arelistValueChecked = "checked";  
+    }
+  });
 };
 export default clickOnCheckBox;

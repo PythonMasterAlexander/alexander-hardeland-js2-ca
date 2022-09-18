@@ -2,7 +2,6 @@ import displayApiErrorMessage from './displayApiErrorMessage.js';
 import createCardFromApi from './createCardFromApi.js';
 import insertApiValuesOnPage from './insertApiValuesOnPage.js';
 import clickOnCheckBox from './clickOnCheckBox.js';
-import getValuesFromLocalStorage from './getValuesFromLocalStorage.js';
 
 import { mainSectionApiContainer } from '../partials/variables.js';
 import { baseUrl } from '../partials/constants.js';
@@ -23,10 +22,6 @@ export const getApiValues = async function() {
     checkBoxes.forEach((checkBox) => {
       checkBox.addEventListener("click", clickOnCheckBox);
     });
-
-    //Here I got the list from localStorage 
-    //Now I need to get the checkBoxes dataset.id and compare to the values valuesInLocalStorage 
-
   }
   catch(error) {
     mainSectionApiContainer.replaceChildren();
