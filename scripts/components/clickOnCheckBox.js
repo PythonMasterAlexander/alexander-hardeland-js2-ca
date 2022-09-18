@@ -6,6 +6,7 @@ import { key } from '../partials/constants.js';
 const clickOnCheckBox = function() {
   const dataIdOnValue = this.dataset.id;
   let isChecked = this.checked;
+  console.log(isChecked);
 
   const valueInLocalStorage = getValuesFromLocalStorage();
   
@@ -27,14 +28,16 @@ const clickOnCheckBox = function() {
   }
 
   //Here I am trying to mark the checkBoxes as marked. By comparing the two values but it don't work
+  //I tried to parseInt both values but using typeof tells me that both values are string value
   const getLocalStorageId = valueInLocalStorage.find((value) => {
-    return parseInt(value) === parseInt(dataIdOnValue);
+    return value.id === dataIdOnValue;
   });
   
+  console.log(getLocalStorageId);
   if (getLocalStorageId) {
     isChecked = true;
   } else {
-    isChecked = "";
+    isChecked = false;
   }
 
 };
