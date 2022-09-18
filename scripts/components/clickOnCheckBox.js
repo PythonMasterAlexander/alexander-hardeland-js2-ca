@@ -22,5 +22,14 @@ const clickOnCheckBox = function() {
 
     saveValueToLocalStorage(newValueInLocalStore);
   }
+
+  //newValueInLocalStorage is the list of objects stored in local storage,Error saveValueToLocalStorage is not defined
+  //I need to compare the localStore against the dataset.id value on each checkBox 
+  //console.log(newValueInLocalStore);
+
+  //If I do a console log of this, the checkBox gets loged when I press the checkBox
+  //From this one I can get the data-id value
+  //But then my problem is this, how can I get the value in localStorage here? The variable newValueInLocalStore is not recognised here. 
+  console.log(this);
 };
 export default clickOnCheckBox;
