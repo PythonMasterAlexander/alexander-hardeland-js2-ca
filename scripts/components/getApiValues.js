@@ -26,7 +26,6 @@ export const getApiValues = async function() {
 
     //Here I got the list from localStorage 
     //Now I need to get the checkBoxes dataset.id and compare to the values valuesInLocalStorage 
-    const valuesInLocalStorage = getValuesFromLocalStorage();
 
   }
   catch(error) {

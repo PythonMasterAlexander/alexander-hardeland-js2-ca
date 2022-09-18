@@ -5,12 +5,12 @@ export const saveValueToLocalStorage = function(valueInList) {
 };
 
 const getValuesFromLocalStorage = function() {
-  const localStorageList = localStorage.getItem(key);
+  const localStorageList = JSON.parse(localStorage.getItem(key)); 
 
   if (!localStorageList) {
     return [];
   }
 
-  return JSON.parse(localStorageList);
+  return localStorageList;
 };
 export default getValuesFromLocalStorage; 
