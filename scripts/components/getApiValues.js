@@ -18,10 +18,6 @@ const getApiValues = async function() {
     mainSectionApiContainer.replaceChildren();
     insertApiValuesOnPage(dataFromApiResult, createCardFromApi, mainSectionApiContainer);
 
-    const checkBoxes = document.querySelectorAll("[type=checkbox]");
-    checkBoxes.forEach((checkBox) => {
-      checkBox.addEventListener("click", clickOnCheckBox);
-    });
     
     searchInput.addEventListener("keyup", () => {
       const keyValue = event.target.value.trim().toLowerCase();
@@ -30,11 +26,16 @@ const getApiValues = async function() {
         const apiTitle = title.attributes.title;
         if (apiTitle.toLowerCase().startsWith(keyValue)) {
           return true;
-        }
+        } 
       });
 
       mainSectionApiContainer.replaceChildren();
       insertApiValuesOnPage(filteredApiTitles, createCardFromApi, mainSectionApiContainer);
+    });
+
+    const checkBoxes = document.querySelectorAll("[type=checkbox]");
+    checkBoxes.forEach((checkBox) => {
+      checkBox.addEventListener("click", clickOnCheckBox);
     });
   }
 

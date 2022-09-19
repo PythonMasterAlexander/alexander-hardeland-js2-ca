@@ -5,6 +5,6 @@ import { mainSectionApiContainer } from './partials/variables.js';
 
 apiLoader(mainSectionApiContainer);
 
-setTimeout(function() {
-  mainSectionApiContainer.innerHTML = getApiValues();  
+setTimeout( async function() {
+  mainSectionApiContainer.append = await getApiValues();  
 }, 3000);
