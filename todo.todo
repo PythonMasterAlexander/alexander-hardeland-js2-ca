@@ -1,8 +1,7 @@
 -[] Write a description for what the site is about for SEO purpose. Write for each html file
 -[] Write styles for responsive header
 -[] Build a login form on login page
--[] Build and make a filter input in css and js for the home page
--[] Add crypto images to my api. NB Use any code for trademarks, but Crypto Logos page say they are free to use
+- [] Build and make a filter input in css and js for the home page
 
 
 - [x] Create a setTimout when the api is loading

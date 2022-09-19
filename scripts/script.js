@@ -8,4 +8,3 @@ apiLoader(mainSectionApiContainer);
 setTimeout(function() {
   mainSectionApiContainer.innerHTML = getApiValues();  
 }, 3000);
-
