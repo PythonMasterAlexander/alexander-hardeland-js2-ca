@@ -1,4 +1,4 @@
-import displayApiErrorMessage from './displayApiErrorMessage.js';
+import displayApiErrorMessage from '../utilities/displayApiErrorMessage.js';
 import createCardFromApi from './createCardFromApi.js';
 import insertApiValuesOnPage from './insertApiValuesOnPage.js';
 import clickOnCheckBox from './clickOnCheckBox.js';
@@ -8,14 +8,14 @@ import { baseUrl } from '../partials/constants.js';
 
 const apiUrl = baseUrl + "/api" + "/cryptos";
 
-export const getApiValues = async function() {
+const getApiValues = async function() {
   try {
     const response = await fetch(apiUrl);
-
     const apiResult = await response.json();
-    const dataFromApiResult = apiResult.data;
 
+    const dataFromApiResult = apiResult.data;
     mainSectionApiContainer.replaceChildren();
+
     insertApiValuesOnPage(dataFromApiResult, createCardFromApi, mainSectionApiContainer);
 
     const checkBoxes = document.querySelectorAll("[type=checkbox]");
@@ -25,7 +25,7 @@ export const getApiValues = async function() {
   }
   catch(error) {
     mainSectionApiContainer.replaceChildren();
-
-    displayApiErrorMessage();
+    displayApiErrorMessage("Failed to call Api");
   }
 };
+export default getApiValues; 
