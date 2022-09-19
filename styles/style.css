@@ -25,14 +25,28 @@ body {
 .wrapper {
   flex: 1 0 auto; }
 
+h1 {
+  font-size: 30px; }
+
+h2 {
+  font-size: 27px; }
+
+article p {
+  font-size: 21px;
+  margin-top: 10px; }
+
+.main-section--paragraph {
+  font-size: 21px; }
+
 a {
   text-decoration: 0; }
 
-nav a {
-  font-size: 21px; }
-
 main a {
   color: white; }
+
+nav a {
+  font-size: 21px;
+  color: #082b0e; }
 
 .main-section__to-login-button-container a {
   font-size: 30px; }
@@ -49,24 +63,27 @@ main a {
   font-size: 21px; }
 
 header {
-  margin: 80px 0; }
+  max-width: 80%;
+  margin: 40px auto; }
 
-nav {
-  margin-top: 80px;
-  margin-left: 105px; }
+header nav {
+  margin: 40px 0; }
 
-svg {
-  margin-left: 40px; }
+main {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 50px; }
 
-header span {
-  margin-left: 10px; }
-
-header a {
-  margin-right: 20px; }
+article {
+  margin: 50px 0;
+  max-width: 320px; }
 
 svg {
   height: 50px;
   width: 50px; }
+
+.main-section__currencies-container {
+  margin-top: 50px; }
 
 .main-section__to-login-button-container, .main-section__to-favourites-button-container {
   background-color: #082b0e;

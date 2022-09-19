@@ -1,13 +1,31 @@
+h1 {
+  font-size: $font-size-30px;
+}
+
+h2 {
+  font-size: $font-size-27px;
+}
+
+article p {
+  font-size: $font-size-21px;
+  margin-top: 10px;
+}
+
+.main-section--paragraph {
+  font-size: $font-size-21px;
+}
+
 a {
   text-decoration: 0;
 }
 
-nav a {
-  font-size: $font-size-21px;
-}
-
 main a {
   color: $white-color;
+}
+
+nav a {
+  font-size: $font-size-21px;
+  color: $button-color;
 }
 
 .main-section__to-login-button-container a {

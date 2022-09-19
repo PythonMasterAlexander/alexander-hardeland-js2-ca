@@ -1,20 +1,9 @@
 header {
-  margin: $container-margin-top-bottom 0;
+  max-width: 80%; 
+  margin: 40px auto;
 }
 
-nav {
-  margin-top: $container-margin-top-bottom;
-  margin-left: 105px;
+header nav {
+  margin: 40px 0;
 }
 
-svg {
-  margin-left: 40px;
-}
-
-header span {
-  margin-left: 10px;
-}
-
-header a {
-  margin-right: 20px;
-}
