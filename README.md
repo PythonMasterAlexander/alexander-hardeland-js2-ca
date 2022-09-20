@@ -25,7 +25,7 @@ Each item should also display a button or icon. Clicking on this button should t
 
 There should be a text input on this page that filters the array of results on one of the properties.
 
-Favourites page
+Favorites page
 
 This page should fetch the array of items stored in localStorage and display them or display a message that there are no items.
 There should be a “Clear all” button that clears localStorage (or just a specific key in localStorage) and reloads the display. Don’t reload the page, just redraw the HTML.
