@@ -24,11 +24,19 @@ button {
   padding: 10px 0;
 }
 
-.main-section__to-login-button-container, .main-section__to-favourites-button-container, .main-section__filter-input-container {
+.main-section__to-login-button-container, .main-section__to-favourites-button-container, .main-section__filter-input-container, 
+.main-section__go-back-button {
   background-color: $button-color;
   border-radius: 3px;
   width: 320px;
   text-align: center;
+}
+
+.main-section__go-back-button {
+  margin-top: 40px;
+  width: 160px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .main-section__currencies-container {
