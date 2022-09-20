@@ -4,6 +4,11 @@ h1 {
 
 h2 {
   font-size: $font-size-27px;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: 0;
 }
 
 article p {
@@ -11,16 +16,9 @@ article p {
   margin-top: 10px;
 }
 
-.main-section--paragraph {
-  font-size: $font-size-21px;
-}
-
-a {
-  text-decoration: 0;
-}
-
 main a {
   color: $white-color;
+  margin-right: 10px;
 }
 
 nav a {
@@ -28,12 +26,20 @@ nav a {
   color: $button-color;
 }
 
-.main-section__to-login-button-container a {
-  font-size: $font-size-30px;
+header a {
+  color: black;
 }
 
 .logo-container--bitcoin-logo, .logo-container--crypto-news-logo {
   font-family: $bitcoin-logo-font-family;
+}
+
+.main-section--paragraph {
+  font-size: $font-size-21px;
+}
+
+.main-section__to-login-button-container a {
+  font-size: $font-size-30px;
 }
 
 .logo-container--bitcoin-logo {

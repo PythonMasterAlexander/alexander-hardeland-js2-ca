@@ -1,9 +1,9 @@
 -[] Write a description for what the site is about for SEO purpose. Write for each html file
--[] Write styles for responsive header
 -[] Build a login form on login page
-- [] Build and make a filter input in css and js for the home page
+-[] fix cards and api on favourites page
 
-
+- [x] Write styles for responsive header
+- [x] Build and make a filter input in css and js for the home page
 - [x] Create a setTimout when the api is loading
 - [x] Build a loading component for my api call
 - [x] Create styling for buttons

@@ -29,30 +29,35 @@ h1 {
   font-size: 30px; }
 
 h2 {
-  font-size: 27px; }
+  font-size: 27px;
+  margin-bottom: 10px; }
+
+a {
+  text-decoration: 0; }
 
 article p {
   font-size: 21px;
   margin-top: 10px; }
 
-.main-section--paragraph {
-  font-size: 21px; }
-
-a {
-  text-decoration: 0; }
-
 main a {
-  color: white; }
+  color: white;
+  margin-right: 10px; }
 
 nav a {
   font-size: 21px;
   color: #082b0e; }
 
-.main-section__to-login-button-container a {
-  font-size: 30px; }
+header a {
+  color: black; }
 
 .logo-container--bitcoin-logo, .logo-container--crypto-news-logo {
   font-family: "Exo 2", "Impact", sans-serif; }
+
+.main-section--paragraph {
+  font-size: 21px; }
+
+.main-section__to-login-button-container a {
+  font-size: 30px; }
 
 .logo-container--bitcoin-logo {
   font-size: 37px;
@@ -66,11 +71,18 @@ header {
   max-width: 80%;
   margin: 40px auto; }
 
-header nav {
-  margin: 40px 0; }
+@media (max-width: 520px) {
+  .logo-container--crypto-news-logo {
+    display: none; }
+  .logo-container--bitcoin-logo {
+    font-size: 27px; }
+  header a {
+    display: block;
+    margin: 0 auto;
+    width: 200px; } }
 
 main {
-  max-width: 80%;
+  max-width: 67%;
   margin: 0 auto;
   margin-bottom: 50px; }
 
@@ -82,25 +94,40 @@ svg {
   height: 50px;
   width: 50px; }
 
-.main-section__currencies-container {
-  margin-top: 50px; }
-
-.main-section__to-login-button-container, .main-section__to-favourites-button-container {
+.main-section__to-login-button-container, .main-section__to-favourites-button-container, .main-section__filter-input-container {
   background-color: #082b0e;
   border-radius: 3px;
   width: 320px;
   text-align: center; }
 
+.main-section__currencies-container {
+  margin-top: 50px; }
+
+.main-section__filter-input-container {
+  background-color: #dde4e4; }
+
+.main-section__filter-input-container input {
+  border-radius: 1px;
+  border: 2px solid black;
+  display: block;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100px; }
+
 .main-section__to-login-button-container {
   padding-top: 24px;
-  padding-bottom: 24px; }
+  padding-bottom: 24px;
+  cursor: pointer; }
 
 .main-section__to-favourites-button-container {
   padding-top: 12px;
-  padding-bottom: 12px; }
+  padding-bottom: 12px;
+  cursor: pointer; }
 
 .main-section__api-container {
-  margin: 40px auto; }
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 40px; }
 
 .card-container {
   background-color: white;
@@ -109,11 +136,33 @@ svg {
   margin-right: 50px;
   padding: 20px; }
 
+@media (max-width: 520px) {
+  .main-section--paragraph, h1, h2, h3 {
+    text-align: center; }
+  h1, h2 {
+    font-size: 21px; }
+  nav a {
+    display: none; }
+  p {
+    font-size: 16px; }
+  main a {
+    font-size: 21px; }
+  .main-section__to-login-button-container, .main-section__to-favourites-button-container, .main-section__filter-input-container {
+    width: 160px;
+    margin: 0 auto; }
+  .main-section__bitcoin-information--container {
+    max-width: 200px;
+    margin: 0 auto; } }
+
 footer {
   background-color: #082b0e;
   color: white;
   min-height: 125px;
   flex-shrink: 0; }
+
+footer section {
+  max-width: 67%;
+  margin: 50px auto; }
 
 .api-loading-container {
   display: flex;
@@ -121,12 +170,6 @@ footer {
   align-items: flex-end;
   width: 50px;
   height: 100px; }
-
-@keyframes bounce {
-  from {
-    transform: translateY(0); }
-  to {
-    transform: translateY(-100px); } }
 
 .api-loading-container div {
   width: 10px;
@@ -153,7 +196,6 @@ footer {
 .display-error__container {
   background-color: rgba(255, 0, 0, 0.6);
   border-radius: 2px;
-  border: 3px solid red;
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -161,3 +203,9 @@ footer {
 
 .display-error {
   color: white; }
+
+@keyframes bounce {
+  from {
+    transform: translateY(0); }
+  to {
+    transform: translateY(-100px); } }

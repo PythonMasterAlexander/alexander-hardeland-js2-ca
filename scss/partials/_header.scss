@@ -3,7 +3,19 @@ header {
   margin: 40px auto;
 }
 
-header nav {
-  margin: 40px 0;
+@media (max-width: 520px) {
+  .logo-container--crypto-news-logo {
+    display: none;
+  }
+
+  .logo-container--bitcoin-logo {
+    font-size: $font-size-27px;
+  }
+
+  header a {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+  }
 }
 

@@ -1,5 +1,5 @@
 main {
-  max-width: 80%;
+  max-width: 67%;
   margin: 0 auto;
   margin-bottom: 50px;
 }
@@ -14,28 +14,45 @@ svg {
   width: 50px;
 }
 
-.main-section__currencies-container {
-  margin-top: 50px;
-}
-
-.main-section__to-login-button-container, .main-section__to-favourites-button-container {
+.main-section__to-login-button-container, .main-section__to-favourites-button-container, .main-section__filter-input-container {
   background-color: $button-color;
   border-radius: 3px;
   width: 320px;
   text-align: center;
 }
 
+.main-section__currencies-container {
+  margin-top: 50px;
+}
+
+.main-section__filter-input-container {
+  background-color: #dde4e4;
+}
+
+.main-section__filter-input-container input {
+  border-radius: 1px;
+  border: 2px solid black;
+  display: block;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100px;
+}
+
 .main-section__to-login-button-container {
   padding-top: 24px;
   padding-bottom: 24px;
+  cursor: pointer;
 }
 .main-section__to-favourites-button-container {
   padding-top: 12px;
   padding-bottom: 12px;
+  cursor: pointer;
 }
 
 .main-section__api-container {
-  margin: 40px auto;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 .card-container {
@@ -44,4 +61,36 @@ svg {
   display: inline-block;
   margin-right: 50px;
   padding: 20px;
+}
+
+@media(max-width: 520px) {
+  .main-section--paragraph, h1, h2, h3 {
+    text-align: center;
+  }
+  
+  h1, h2 {
+    font-size: $font-size-21px;
+  }
+
+  nav a {
+    display: none;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  main a {
+    font-size: $font-size-21px;
+  }
+
+  .main-section__to-login-button-container, .main-section__to-favourites-button-container, .main-section__filter-input-container {
+    width: 160px;
+    margin: 0 auto;
+  }
+
+  .main-section__bitcoin-information--container {
+    max-width: 200px;
+    margin: 0 auto;
+  }
 }
