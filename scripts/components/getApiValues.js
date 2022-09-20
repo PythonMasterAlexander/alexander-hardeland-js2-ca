@@ -38,10 +38,9 @@ const getApiValues = async function() {
     checkBoxes.forEach((checkBox) => {
       checkBox.addEventListener("click", clickOnCheckBox);
 
-      //This is where I can console log my localStorage list.
-      //Only problem is, if I try putting it in a variable, the loading of my api fails.
-      //Next move is to save the list state so when I refresh the page, if there is any checkbox checked( in locla storage ) they should stay checked
-      //Then I need to display them in the favourites page if they are
+      //Test is the list localStorage list, it is an array of objects and each object shows the id and completed state of either true or false
+      //Now I need to make it so if there is any value in local storage, the checkbox for this value is checked if you refresh the page
+      //Then I need to get those values in the favourites page
       console.log(getValuesFromLocalStorage());
       const test = getValuesFromLocalStorage();
       console.log(test);
