@@ -94,6 +94,15 @@ svg {
   height: 50px;
   width: 50px; }
 
+button {
+  font-size: 21px;
+  margin-top: 8px;
+  background-color: #082b0e;
+  border-radius: 3px;
+  color: white;
+  width: 160px;
+  padding: 10px 0; }
+
 .main-section__to-login-button-container, .main-section__to-favourites-button-container, .main-section__filter-input-container {
   background-color: #082b0e;
   border-radius: 3px;
@@ -147,6 +156,9 @@ svg {
   margin: 10px 0;
   width: 20px;
   height: 20px; }
+
+.favourites-page__button-container {
+  margin-top: 40px; }
 
 @media (max-width: 520px) {
   .main-section--paragraph, h1, h2, h3 {

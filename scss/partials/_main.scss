@@ -14,6 +14,16 @@ svg {
   width: 50px;
 }
 
+button {
+  font-size: $font-size-21px;
+  margin-top: 8px;
+  background-color: $button-color;
+  border-radius: 3px;
+  color: $white-color;
+  width: 160px;
+  padding: 10px 0;
+}
+
 .main-section__to-login-button-container, .main-section__to-favourites-button-container, .main-section__filter-input-container {
   background-color: $button-color;
   border-radius: 3px;
@@ -74,6 +84,10 @@ svg {
   margin: 10px 0;
   width: 20px;
   height: 20px;
+}
+
+.favourites-page__button-container {
+  margin-top: 40px;
 }
 
 @media(max-width: 520px) {

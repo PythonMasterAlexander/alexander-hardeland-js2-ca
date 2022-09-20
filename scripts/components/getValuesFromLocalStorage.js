@@ -10,7 +10,7 @@ const getValuesFromLocalStorage = function() {
   if (!localStorageList) {
     return [];
   }
-
+  
   return localStorageList;
 };
 export default getValuesFromLocalStorage; 

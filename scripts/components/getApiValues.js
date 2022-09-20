@@ -45,7 +45,7 @@ const getApiValues = async function() {
     //Then next move is to move the values in localstorage to favourites page if any of the boxes are clicked
     //Right now I dont have any idea how to do this. I am going over some lesson video to see if I can come up with something.
     const test = getValuesFromLocalStorage();
-    console.log(test);
+    //console.log(test);
   }
 
   catch(error) {
