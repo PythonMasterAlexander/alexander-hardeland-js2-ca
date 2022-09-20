@@ -38,14 +38,6 @@ const getApiValues = async function() {
     checkBoxes.forEach((checkBox) => {
       checkBox.addEventListener("click", clickOnCheckBox);
     });
-
-    //I will refactor some of the code when everything works
-    //When clicking a checkBox, the console logs an array of objects containing the id of the object and a completed state of true or false
-    //Next move will be to have the checkbox clicked if the value is true and I refresh the page
-    //Then next move is to move the values in localstorage to favourites page if any of the boxes are clicked
-    //Right now I dont have any idea how to do this. I am going over some lesson video to see if I can come up with something.
-    const test = getValuesFromLocalStorage();
-    //console.log(test);
   }
 
   catch(error) {

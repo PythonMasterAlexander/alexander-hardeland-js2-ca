@@ -9,6 +9,13 @@ const insertApiValuesOnPage = function(apiData, insertHtml, container) {
 
     container.appendChild(insertHtml(cryptoTitle, cryptoPrice, idAttribute, cryptoInformation));
   }
+  if (!apiData.length) {
+    const cardHeading = document.createElement("h2");
+    cardHeading.innerText = "This Crypto are not in the database";
+
+    container.appendChild(cardHeading);
+  }
+
   return container;
 };
 export default insertApiValuesOnPage; 
