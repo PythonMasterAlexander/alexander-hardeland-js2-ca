@@ -13,7 +13,6 @@ const clickOnCheckBox = function() {
     return value.id === dataIdOnValue;
   });
 
-  console.log(doValueInLocalStorageExist);
   if (doValueInLocalStorageExist === undefined) {
     const objectStructure = { id: dataIdOnValue };
 
@@ -41,6 +40,8 @@ const clickOnCheckBox = function() {
     if (listValue.complete) {
       arelistValueChecked = "checked";  
     }
+    console.log(valueInLocalStorage);
+    return valueInLocalStorage;
   });
 };
 export default clickOnCheckBox;
