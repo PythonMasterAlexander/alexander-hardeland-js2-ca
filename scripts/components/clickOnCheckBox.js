@@ -13,10 +13,10 @@ const clickOnCheckBox = function() {
     return value.id === dataIdOnValue;
   });
 
+  console.log(doValueInLocalStorageExist);
   if (doValueInLocalStorageExist === undefined) {
     const objectStructure = { id: dataIdOnValue };
 
-    //Store the value of local storage in a variables, if the variable is empty it returns an empty array
     valueInLocalStorage.push(objectStructure);
     saveValueToLocalStorage(valueInLocalStorage); 
 
@@ -26,8 +26,6 @@ const clickOnCheckBox = function() {
     saveValueToLocalStorage(newValueInLocalStore);
   }
 
-  //Here I am trying to mark the checkBoxes as marked. By comparing the two values but it don't work
-  //I tried to parseInt both values but using typeof tells me that both values are string value
 
   const valueInLocalStorageIndex = valueInLocalStorage.findIndex((value) => {
     if (value.id === dataIdOnValue) {
@@ -39,7 +37,6 @@ const clickOnCheckBox = function() {
 
   valueInLocalStorage.forEach((listValue) => {
     let arelistValueChecked = "";
-    console.log(valueInLocalStorage);
 
     if (listValue.complete) {
       arelistValueChecked = "checked";  
