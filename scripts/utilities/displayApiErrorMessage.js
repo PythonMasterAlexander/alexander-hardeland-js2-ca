@@ -1,11 +1,10 @@
-import { createElement } from '../components/createCardFromApi.js';
 import { mainSectionApiContainer } from '../partials/variables.js';
 
 const displayApiErrorMessage = function(message = "Error") {
-  const div = createElement("div");
+  const div = document.createElement("div");
   div.classList.add("display-error__container");
 
-  const errorHeading = createElement('span');
+  const errorHeading = document.createElement('span');
   errorHeading.classList.add("display-error");
 
   errorHeading.innerText = message;

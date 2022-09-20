@@ -1,28 +1,26 @@
-export const createElement = function(typeOfElement) {
-  const element = document.createElement(typeOfElement);
-
-  return element;
-};
-
-const createCardFromApi = function(title, price, id) {
-  const div = createElement('div');
+const createCardFromApi = function(title, price, id, information) {
+  const div = document.createElement('div');
   div.setAttribute("class", "card-container");
 
-  const cardHeading = createElement('h3');
-  const priceTitleSpan = createElement('span');
+  const cardHeading = document.createElement('h3');
+  cardHeading.innerText = title;
+
+  const priceTitleSpan = document.createElement('span');
+  priceTitleSpan.innerText = "Price" 
 
   const priceSpan = priceTitleSpan.cloneNode();
-  const checkBox = createElement('input');
+  priceSpan.style = "margin-left: 10px;"
+  priceSpan.innerText = price + " $";
 
-  cardHeading.innerText = title;
-  priceSpan.innerText = price;
+  const informationElement = document.createElement("p");
+  informationElement.innerText = information;
 
-  priceTitleSpan.innerText = "Price" 
+  const checkBox = document.createElement('input');
   checkBox.setAttribute("type", "checkbox");
   checkBox.setAttribute("data-id", id);
   
 
-  div.append(cardHeading, priceTitleSpan, priceSpan, checkBox);
+  div.append(cardHeading, priceTitleSpan, priceSpan, checkBox, informationElement);
   return div;
 };
 export default createCardFromApi; 

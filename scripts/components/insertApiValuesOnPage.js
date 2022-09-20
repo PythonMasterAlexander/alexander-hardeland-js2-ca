@@ -5,8 +5,9 @@ const insertApiValuesOnPage = function(apiData, insertHtml, container) {
 
     const cryptoTitle = value.title;
     const cryptoPrice = value.price;
+    const cryptoInformation = value.description;
 
-    container.appendChild(insertHtml(cryptoTitle, cryptoPrice, idAttribute));
+    container.appendChild(insertHtml(cryptoTitle, cryptoPrice, idAttribute, cryptoInformation));
   }
   return container;
 };

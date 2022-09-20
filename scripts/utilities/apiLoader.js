@@ -1,10 +1,8 @@
-import { createElement } from '../components/createCardFromApi.js';
-
 const apiLoader = function(container) {
-  const loaderContainer = createElement("div");
+  const loaderContainer = document.createElement("div");
   loaderContainer.classList.add("api-loading-container");
 
-  const firstBall = createElement("div");
+  const firstBall = document.createElement("div");
   const secondBall = firstBall.cloneNode();
   const thirdBall = secondBall.cloneNode();
   const fourthBall = thirdBall.cloneNode();

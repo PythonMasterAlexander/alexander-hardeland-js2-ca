@@ -50,17 +50,27 @@ svg {
 }
 
 .main-section__api-container {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 40px;
 }
 
 .card-container {
+  max-width: 400px;
   background-color: $white-color;
   border-radius: 3px;
   display: inline-block;
-  margin-right: 50px;
   padding: 20px;
+}
+
+[type=checkbox] {
+  display: block;
+  margin: 10px 0;
 }
 
 @media(max-width: 520px) {
@@ -84,6 +94,11 @@ svg {
     font-size: $font-size-21px;
   }
 
+  article p {
+    font-size: $font-default;
+    text-align: center;
+  }
+
   .main-section__to-login-button-container, .main-section__to-favourites-button-container, .main-section__filter-input-container {
     width: 160px;
     margin: 0 auto;
@@ -92,5 +107,9 @@ svg {
   .main-section__bitcoin-information--container {
     max-width: 200px;
     margin: 0 auto;
+  }
+
+  .main-section--paragraph {
+    font-size: $font-default;
   }
 }
