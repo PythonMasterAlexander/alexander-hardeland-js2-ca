@@ -43,7 +43,6 @@ const clickOnCheckBox = function() {
 
     //This is where I can log the array with the object that shows the state of the completed property, true or false
     //Now I need to get this list out and use it outside of this function 
-    console.log(valueInLocalStorage);
     return valueInLocalStorage;
   });
 };

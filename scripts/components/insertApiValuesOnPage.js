@@ -11,7 +11,7 @@ const insertApiValuesOnPage = function(apiData, insertHtml, container) {
   }
   if (!apiData.length) {
     const cardHeading = document.createElement("h2");
-    cardHeading.innerText = "This Crypto are not in the database";
+    cardHeading.innerText = "Crypto are not in the database";
 
     container.appendChild(cardHeading);
   }

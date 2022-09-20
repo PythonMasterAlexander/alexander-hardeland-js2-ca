@@ -1,3 +1,5 @@
+import getValuesFromLocalStorage from './getValuesFromLocalStorage.js';
+
 const createCardFromApi = function(title, price, id, information) {
   const div = document.createElement('div');
   div.setAttribute("class", "card-container");
@@ -18,7 +20,16 @@ const createCardFromApi = function(title, price, id, information) {
   const checkBox = document.createElement('input');
   checkBox.setAttribute("type", "checkbox");
   checkBox.setAttribute("data-id", id);
-  
+
+  const apiInLocalStorage = getValuesFromLocalStorage(); 
+
+  const isApiInLocalStorage = apiInLocalStorage.find((api) => {
+    return parseInt(api.id) === id;
+  })
+
+  if (isApiInLocalStorage) {
+    checkBox.setAttribute("checked", "checked");
+  }
 
   div.append(cardHeading, priceTitleSpan, priceSpan, checkBox, informationElement);
   return div;

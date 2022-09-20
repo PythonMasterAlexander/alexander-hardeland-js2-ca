@@ -2,12 +2,11 @@ import displayApiErrorMessage from '../utilities/displayApiErrorMessage.js';
 import createCardFromApi from './createCardFromApi.js';
 import insertApiValuesOnPage from './insertApiValuesOnPage.js';
 import clickOnCheckBox from './clickOnCheckBox.js';
-import getValuesFromLocalStorage from './getValuesFromLocalStorage.js';
 
 import { mainSectionApiContainer, searchInput } from '../partials/variables.js';
 import { baseUrl } from '../partials/constants.js';
 
-const apiUrl = baseUrl + "/api" + "/cryptos";
+export const apiUrl = baseUrl + "/api" + "/cryptos";
 
 const getApiValues = async function() {
   try {
