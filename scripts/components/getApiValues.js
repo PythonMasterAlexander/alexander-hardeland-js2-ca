@@ -37,14 +37,15 @@ const getApiValues = async function() {
     const checkBoxes = document.querySelectorAll("[type=checkbox]");
     checkBoxes.forEach((checkBox) => {
       checkBox.addEventListener("click", clickOnCheckBox);
-
-      //Test is the list localStorage list, it is an array of objects and each object shows the id and completed state of either true or false
-      //Now I need to make it so if there is any value in local storage, the checkbox for this value is checked if you refresh the page
-      //Then I need to get those values in the favourites page
-      console.log(getValuesFromLocalStorage());
-      const test = getValuesFromLocalStorage();
-      console.log(test);
     });
+
+    //I will refactor some of the code when everything works
+    //When clicking a checkBox, the console logs an array of objects containing the id of the object and a completed state of true or false
+    //Next move will be to have the checkbox clicked if the value is true
+    //Then next move is to move the values in localstorage to favourites page if any of the boxes are clicked
+    //Right now I dont have any idea how to do this. I am going over some lesson video to see if I can come up with something.
+    const test = getValuesFromLocalStorage();
+    console.log(test);
   }
 
   catch(error) {
