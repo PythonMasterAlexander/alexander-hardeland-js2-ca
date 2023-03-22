@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch scss -o styles"
+    "watch": "sass --watch src/scss:dist/css & live-server "
+    "jsdocs": "jsdoc /src -r"
   },
   "author": "Alexander Hardeland",
   "license": "ISC",
-  "dependencies": {
-    "node-sass": "^7.0.3"
+  "devDependencies": {
+    "jsdoc": "^4.0.2",
+    "live-server": "^1.2.2",
+    "sass": "^1.59.3"
   }
 }
