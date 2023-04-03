@@ -5,3 +5,23 @@
 - [x] Build a loading component for my api call
 - [x] Create styling for buttons
 - [x] Style the header of the website
+
+{
+  "source": {
+    "include": ["src/scripts"],
+    "includePattern": ".js",
+    "excludePattern": ["node_modules"]
+  },
+
+  "plugins": {
+    "templates": {
+      "cleverLinks": true,
+      "monospaceLinks": true
+    }
+  },
+
+  "opts": {
+    "recurse": true,
+    "destination": "./out/"
+  }
+}
