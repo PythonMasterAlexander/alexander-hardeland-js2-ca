@@ -4,8 +4,8 @@
   "description": "Course Assignment Javascript2",
   "main": "index.js",
   "scripts": {
-    "watch": "sass --watch src/scss:dist/css & live-server",
-    "jsdocs": "jsdoc ./src/scripts -r"
+    "start": "concurrently \"tsc --watch\" \"live-server\" \"sass --watch src/scss:dist/css\"",
+    "jsdocs": "jsdoc ./src/scripts"
   },
   "author": "Alexander Hardeland",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "concurrently": "^8.0.1",
     "jsdoc": "^4.0.2",
     "live-server": "^1.2.2",
-    "sass": "^1.59.3"
+    "sass": "^1.59.3",
+    "typescript": "^5.0.3"
   }
 }
