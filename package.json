@@ -5,14 +5,19 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"tsc --watch\" \"live-server\" \"sass --watch src/scss:dist/css\"",
-    "jsdocs": "jsdoc ./src/scripts"
+    "prettier": "npx prettier ./src/scripts/*.* --write",
+    "check-prettier": "npx prettier ./src/scripts/**/*.* --check",
+    "lint": "npx eslint ./src/scripts/**/*.*"
   },
   "author": "Alexander Hardeland",
   "license": "ISC",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
     "concurrently": "^8.0.1",
-    "jsdoc": "^4.0.2",
+    "eslint": "^8.44.0",
     "live-server": "^1.2.2",
+    "prettier": "3.0.0",
     "sass": "^1.59.3",
     "typescript": "^5.0.3"
   }
