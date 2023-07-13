@@ -4,3 +4,5 @@ node_modules/
 .DS_Store
 # Ignore dist folder
 dist/
+# Ignore eslint cache file
+.eslintcache
