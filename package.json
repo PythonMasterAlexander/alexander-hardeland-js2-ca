@@ -7,7 +7,7 @@
     "start": "concurrently \"tsc --watch\" \"live-server\" \"sass --watch src/scss:dist/css\"",
     "prettier": "npx prettier ./src/scripts/*.* --write",
     "check-prettier": "prettier ./src/** --check",
-    "lint": "eslint ./src/**",
+    "lint": "eslint ./src/**/*.ts",
     "prepare": "husky install"
   },
   "author": "Alexander Hardeland",
@@ -17,6 +17,7 @@
     "@typescript-eslint/parser": "^6.0.0",
     "concurrently": "^8.0.1",
     "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "live-server": "^1.2.2",
