@@ -6,22 +6,4 @@
 - [x] Create styling for buttons
 - [x] Style the header of the website
 
-{
-  "source": {
-    "include": ["src/scripts"],
-    "includePattern": ".js",
-    "excludePattern": ["node_modules"]
-  },
-
-  "plugins": {
-    "templates": {
-      "cleverLinks": true,
-      "monospaceLinks": true
-    }
-  },
-
-  "opts": {
-    "recurse": true,
-    "destination": "./out/"
-  }
-}
+-[] prettier are not formating code like it should do
