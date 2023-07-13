@@ -6,8 +6,8 @@
   "scripts": {
     "start": "concurrently \"tsc --watch\" \"live-server\" \"sass --watch src/scss:dist/css\"",
     "prettier": "npx prettier ./src/scripts/*.* --write",
-    "check-prettier": "prettier ./src/** --check",
-    "lint": "eslint ./src/**/*.ts",
+    "check-prettier": "npx prettier ./src/** --check",
+    "lint": "npx eslint ./src/scripts/*.js",
     "prepare": "husky install"
   },
   "author": "Alexander Hardeland",

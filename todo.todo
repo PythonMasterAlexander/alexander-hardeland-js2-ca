@@ -7,3 +7,4 @@
 - [x] Style the header of the website
 
 -[] prettier are not formating code like it should do
+-[] eslint are not showing error code like it should do
