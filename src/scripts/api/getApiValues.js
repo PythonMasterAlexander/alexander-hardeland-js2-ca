@@ -1,10 +1,11 @@
 import displayApiErrorMessage from '../utilities/displayApiErrorMessage.js';
-import createCardFromApi from './createCardFromApi.js';
-import insertApiValuesOnPage from './insertApiValuesOnPage.js';
-import clickOnCheckBox from './clickOnCheckBox.js';
+import createCardFromApi from '../components/createCardFromApi.js';
+import insertApiValuesOnPage from '../components/insertApiValuesOnPage.js';
+import clickOnCheckBox from '../components/clickOnCheckBox.js';
 import { mainSectionApiContainer, searchInput } from '../variables.js';
-import { BASE_URL } from '../api/constants.js';
+import { BASE_URL } from './constants.js';
 export const apiUrl = BASE_URL + '/api' + '/cryptos';
+
 const getApiValues = async function () {
   try {
     const response = await fetch(apiUrl);

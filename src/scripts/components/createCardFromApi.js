@@ -19,6 +19,7 @@ const createCardFromApi = function (title, price, id, information) {
   const checkBox = document.createElement('input');
   checkBox.setAttribute('type', 'checkbox');
   checkBox.setAttribute('data-id', id);
+  checkBox.setAttribute('data-title', title);
 
   const apiInLocalStorage = getValuesFromLocalStorage();
 
