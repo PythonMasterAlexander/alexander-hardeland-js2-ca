@@ -1,52 +1,70 @@
-Brief
+# Your project title
 
-Use the Strapi API found here. The login details for admin section are in the README file in the repo.
-You can add and edit content in the Strapi project but do not edit the content type(s) (don’t add, edit or delete fields). 
+![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
 
-The markers will use the same version of the API found in the repo.
+A simple overview of the use/purpose of the project.
 
-You can also build your own API using any technology but it MUST BE publicly hosted. Do not submit your API code if you create your own. 
-If you do build and host your own API, the content type it serves must include at least 3 properties.
+## Description
 
-Level 1 is required. Level 2 is optional.
-Choosing appropriate variable and function names will form part of your assessment, as will proper and consistent formatting of your code.
+Add a more detailed description of what your project entails and set out to do.
 
-Level 1 Process
+You can add some bullet points if you'd like to:
 
-Build a frontend for the API and add the following:
+- List item 1
+- List item 2
+- List item 3
 
-Home page
+## Built With
 
-Make a GET request to fetch a list of resources from your API.
+You can list a the tech stack that you've used over here
 
-Create HTML for each item and display at least 3 properties for each.
+- [React.js](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com)
 
-Each item should also display a button or icon. Clicking on this button should toggle the item in and out of an array stored in localStorage.
+## Getting Started
 
-There should be a text input on this page that filters the array of results on one of the properties.
+### Installing
 
-Favorites page
+This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
 
-This page should fetch the array of items stored in localStorage and display them or display a message that there are no items.
-There should be a “Clear all” button that clears localStorage (or just a specific key in localStorage) and reloads the display. Don’t reload the page, just redraw the HTML.
+1. Clone the repo:
 
-Level 2 Process
-Add a login form to your frontend that will allow a logged in admin user to perform the following tasks:
+```bash
+git clone git@github.com:NoroffFEU/portfolio-1-example.git
+```
 
-Adding new resources to the API
-Updating resources through an edit form
-Deleting resources
+2. Install the dependencies:
 
-Rules
+```
+npm install
+```
 
-Copying and sharing of any code will result in your assignment being given a mark of zero.
-You may only use plain JavaScript for this assignment, no JavaScript libraries or frameworks. You may use CSS libraries like Bootstrap.
+### Running
 
-Submission
+Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
 
-Create a folder called your-name-js2-ca, e.g. mary-smith-js2-ca.
-Add all your frontend code to this folder. Do not submit the Strapi files.
-Zip the folder and submit the zip file.
+To run the app, run the following commands:
 
-Time
-40 hours
+```bash
+npm run start
+```
+
+## Contributing
+
+Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+
+## Contact
+
+This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+
+[My Twitter page](www.twitter.com)
+
+[My LinkedIn page](www.linkedin.com)
+
+## License
+
+You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
+
+## Acknowledgments
+
+This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
