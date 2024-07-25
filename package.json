@@ -5,25 +5,30 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"tsc --watch\" \"live-server\" \"sass --watch src/scss:dist/css\"",
-    "prettier": "npx prettier ./src/scripts/*.* --write",
-    "check-prettier": "npx prettier ./src/** --check",
-    "lint": "npx eslint ./src/scripts/*.js",
+    "prettier": "prettier ./src/scripts/*.* --write",
+    "check-prettier": "prettier ./src/** --check",
+    "lint": "eslint ./src/scripts/*.js",
     "prepare": "husky install"
   },
   "author": "Alexander Hardeland",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^8.0.1",
-    "eslint": "^8.44.0",
-    "eslint-config-prettier": "^8.8.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^8.10.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.3",
+    "lint-staged": "^13.3.0",
     "live-server": "^1.2.2",
     "prettier": "3.0.0",
-    "sass": "^1.59.3"
+    "sass": "^1.77.8"
   },
   "lint-staged": {
     "./**/*.{js}": "eslint --cache --fix",
     "./**/*.{js,css,md,scss}": "prettier --write"
+  },
+  "pnpm": {
+    "overrides": {
+      "braces@<3.0.3": ">=3.0.3"
+    }
   }
 }
